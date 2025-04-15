@@ -28,7 +28,7 @@ slaveTexture.colorSpace = SRGBColorSpace;
 const emperorTexture= textureLoader.load('./emperor.png');
 emperorTexture.colorSpace = SRGBColorSpace;
 
-const coverTexture= textureLoader.load('./cover.png');
+const coverTexture= textureLoader.load('./card2.png');
 coverTexture.colorSpace = SRGBColorSpace;
 
 const card1Mat = [
@@ -148,6 +148,43 @@ const oponentCardsPositions = [
     new Vector3(-0.5, 8.47, 2.504),
 ];
 
+const opponentCardsRotations = [
+    new Vector3(2 * Math.PI, Math.PI, 0.15),
+    new Vector3(2 * Math.PI, Math.PI, 0.10),
+    new Vector3(2 * Math.PI, Math.PI, 0),
+    new Vector3(2 * Math.PI, Math.PI, -0.10),
+    new Vector3(2 * Math.PI, Math.PI, -0.15),
+]
+
+let maximum2 = oponentCardsPositions.length - 1;
+let randomNumber2 = Math.floor(Math.random() * (maximum1 - minimum + 1)) + minimum;
+
+const card6 = new Mesh(cardGeo, card6Mat);
+maximum2 = oponentCardsPositions.length - 1;
+randomNumber2 = Math.floor(Math.random() * (maximum2 - minimum + 1)) + minimum;
+configureCard(card6, oponentCardsPositions, opponentCardsRotations, randomNumber1, 'slave');
+
+const card7 = new Mesh(cardGeo, card6Mat);
+maximum2 = oponentCardsPositions.length - 1;
+randomNumber2 = Math.floor(Math.random() * (maximum2 - minimum + 1)) + minimum;
+configureCard(card7, oponentCardsPositions, opponentCardsRotations, randomNumber1, 'citizen');
+
+const card8 = new Mesh(cardGeo, card6Mat);
+maximum2 = oponentCardsPositions.length - 1;
+randomNumber2 = Math.floor(Math.random() * (maximum2 - minimum + 1)) + minimum;
+configureCard(card8, oponentCardsPositions, opponentCardsRotations, randomNumber1, 'citizen');
+
+const card9 = new Mesh(cardGeo, card6Mat);
+maximum2 = oponentCardsPositions.length - 1;
+randomNumber2 = Math.floor(Math.random() * (maximum2 - minimum + 1)) + minimum;
+configureCard(card9, oponentCardsPositions, opponentCardsRotations, randomNumber1, 'slave');
+
+const card10 = new Mesh(cardGeo, card6Mat);
+maximum2 = oponentCardsPositions.length - 1;
+randomNumber2 = Math.floor(Math.random() * (maximum2 - minimum + 1)) + minimum;
+configureCard(card10, oponentCardsPositions, opponentCardsRotations, randomNumber1, 'slave');
+
+export { CARDS, emperorTexture, slaveTexture }
 
 
 
